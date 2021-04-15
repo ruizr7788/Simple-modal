@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Times New Roman", Times, serif;
+  background-image: url(/images/modal_background.jpg);
+  background-size: cover;
+}
+
+/* open modal box */
+
+.container {
+  border-radius: 1em;
+  padding: 4em 8em;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.342);
+}
+
+.container h1 {
+  color: #333;
+  font-size: 50px;
+  text-shadow: 2px 5px 2px rgba(0, 0, 0, 0.226);
+}
+.container button {
+  border: none;
+  color: white;
+  padding: 1em 2em;
+  font-weight: bold;
+  border-radius: 1em;
+  background-color: rgba(255, 0, 0, 0.514);
+  transition: transform 0.2s ease-in-out;
+}
+.container button:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: translateY(2px);
+}
+/* end open modal box */
+
+/* MODAL */
+
+.modal {
+  background-color: white;
+  position: absolute;
+  width: 35em;
+  border-radius: 2em;
+  position: relative;
+  box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.425);
+}
+.modal h1 {
+  font-weight: normal;
+  padding: 0.5em;
+}
+.modal p {
+  text-align: justify;
+  padding: 0 4em 2em 4em;
+}
+.close {
+  font-size: 22px;
+  font-weight: bold;
+  color: red;
+  position: absolute;
+  right: 1em;
+  top: 0.5em;
+}
+.close:hover {
+  cursor: pointer;
+}
+/* end modal */
+
+/* misc. */
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.blur {
+  display: flex;
+  margin: 0;
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.596);
+  width: 100vw;
+  height: 100vh;
+}
