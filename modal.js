@@ -6,20 +6,14 @@ const pageContainer = document.getElementById("page-container");
 
 // functions ------------------------------------------------
 
-const openModal = function () {
-  pageContainer.classList.add("blur");
-  staticCard.classList.add("hidden");
-  modal.classList.remove("hidden");
+const openClose = () => {
+  pageContainer.classList.toggle("blur");
+  staticCard.classList.toggle("hidden");
+  modal.classList.toggle("hidden");
 };
 
-const closeModal = function () {
-  pageContainer.classList.remove("blur");
-  staticCard.classList.remove("hidden");
-  modal.classList.add("hidden");
-};
-
-openButton.addEventListener("click", openModal);
-closeButton.addEventListener("click", closeModal);
+openButton.addEventListener("click", openClose);
+closeButton.addEventListener("click", openClose);
 document.addEventListener("keydown", (event) =>
   event.key === "Escape" ? closeModal() : -1
 );
