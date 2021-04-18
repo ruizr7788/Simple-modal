@@ -15,5 +15,5 @@ const openClose = () => {
 openButton.addEventListener("click", openClose);
 closeButton.addEventListener("click", openClose);
 document.addEventListener("keydown", (event) =>
-  event.key === "Escape" ? closeModal() : -1
+  event.key === "Escape" ? openClose() : -1
 );
